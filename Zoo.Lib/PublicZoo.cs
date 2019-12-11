@@ -4,13 +4,16 @@ using System.Text;
 
 namespace Zoo.Lib
 {
-    class Zoo
+    public class PublicZoo
     {
         public decimal EntranceFee { get; set; } = 50.0M;
+        public LionCage LionCage { get; set; }
 
-        public Zoo(decimal entranceFee)
+        public PublicZoo(decimal entranceFee)
         {
             EntranceFee = entranceFee;
+            LionCage = new LionCage();
         }
+
     }
 }
